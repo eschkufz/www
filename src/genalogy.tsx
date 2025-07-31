@@ -1,7 +1,16 @@
-{
-	"grad": 2015,
-	"school": "Stanford University",
+export type Academic = {
+    name: string;
+    bio?: string;
+    school: string;
+    grad: string | number;
+    parents: Academic[];
+};
+
+export const TREE: Academic = {
 	"name": "Eric Schkufza",
+    "bio": "I am an engineering co-founder at Graft. Prior to that I was a principal applied scientist at Amazon, and a senior researcher at the VMware Research Group. I graduated from Stanford University with a PhD in Computer Science in 2015. My advisor was Professor Alex Aiken. I am interested in programming languages and compilers as they relate to high-performance computing, typically in the context of hardware accelerators. My work focuses on the optimization of machine code, often in the absence of its original source.",
+	"school": "Stanford University",
+	"grad": 2015,
 	"parents": [
 	{
 		"grad": 1988,
@@ -72,7 +81,7 @@
 													{
 														"grad": "1739",
 														"school": "Universitat Leipzig",
-														"name": "Abraham Gotthelf K\u00e4stner ",
+														"name": "Abraham Gotthelf Kastner ",
 														"parents": [
 														{
 															"grad": "1713",
@@ -157,7 +166,7 @@
 																						{
 																							"grad": "1476",
 																							"school": "Universitat Ingolstadt",
-																							"name": "Johannes St\u00f6ffler ",
+																							"name": "Johannes Stoffler ",
 																							"parents": []
 																						},
 																						{
@@ -247,7 +256,7 @@
 																								{
 																									"grad": "1536",
 																									"school": "College de Navarre",
-																									"name": "Petrus (Pierre de La Ram\u00e9e) Ramus ",
+																									"name": "Petrus (Pierre de La Ramee) Ramus ",
 																									"parents": [
 																									{
 																										"grad": "1527",
@@ -257,7 +266,7 @@
 																										{
 																											"grad": "1515, 1521",
 																											"school": "Universite Catholique de Louvain",
-																											"name": "Nicolas (Nicolaes Cleynaerts) Cl\u00e9nard ",
+																											"name": "Nicolas (Nicolaes Cleynaerts) Clenard ",
 																											"parents": [
 																											{
 																												"grad": "1502 1519",
@@ -346,7 +355,7 @@
 																												{
 																													"grad": "1516",
 																													"school": "Universite de Paris",
-																													"name": "Fran\u00e7ois Dubois ",
+																													"name": "Francois Dubois ",
 																													"parents": []
 																												},
 																												{
@@ -369,7 +378,7 @@
 																										{
 																											"grad": "1486, 1491",
 																											"school": "Universite d'Orleans / Universite de Paris",
-																											"name": "Guillaume Bud\u00e9 ",
+																											"name": "Guillaume Bude ",
 																											"parents": [
 																											{
 																												"grad": "",
@@ -512,7 +521,7 @@
 																													{
 																														"grad": "",
 																														"school": "",
-																														"name": "Thomas \u00e0 Kempis ",
+																														"name": "Thomas a Kempis ",
 																														"parents": []
 																													}
 																													]
@@ -554,7 +563,7 @@
 																					{
 																						"grad": "1583, 1600",
 																						"school": "Martin-Luther-Universitat Halle-Wittenberg",
-																						"name": "Melchior J\u00f6stel ",
+																						"name": "Melchior Jostel ",
 																						"parents": [
 																						{
 																							"grad": "1570",
@@ -582,12 +591,12 @@
 																								{
 																									"grad": "1499",
 																									"school": "Uniwersytet Jagiellonski / Universita di Bologna / Universita degli Studi di Ferrara / Universita di Padova",
-																									"name": "Nicolaus (Miko\u0142aj Kopernik) Copernicus ",
+																									"name": "Nicolaus (Mikoaj Kopernik) Copernicus ",
 																									"parents": [
 																									{
 																										"grad": "1489",
 																										"school": "Uniwersytet Jagiellonski",
-																										"name": "Leonhard (Leonard Vitreatoris z Dobczyc) von Dobsch\u00fctz ",
+																										"name": "Leonhard (Leonard Vitreatoris z Dobczyc) von Dobschuctz ",
 																										"parents": []
 																									},
 																									{
@@ -598,7 +607,7 @@
 																										{
 																											"grad": "1457",
 																											"school": "Universitat Leipzig / Universitat Wien",
-																											"name": "Johannes M\u00fcller Regiomontanus ",
+																											"name": "Johannes Muller Regiomontanus ",
 																											"parents": [
 																											{
 																												"grad": "1440",
@@ -676,7 +685,7 @@
 																											{
 																												"grad": "1446 1453",
 																												"school": "Scuola Pubblica di Vicenza Universita di Padova",
-																												"name": "Niccol\u00f2 Leoniceno ",
+																												"name": "Niccolo Leoniceno ",
 																												"parents": [
 																												{
 																													"grad": "",
@@ -797,12 +806,12 @@
 																				{
 																					"grad": "1629",
 																					"school": "Martin-Luther-Universitat Halle-Wittenberg",
-																					"name": "Georg Gro\u00dfhain ",
+																					"name": "Georg Groffhain ",
 																					"parents": [
 																					{
 																						"grad": "1613 1617",
 																						"school": "Martin-Luther-Universitat Halle-Wittenberg Martin-Luther-Universitat Halle-Wittenberg",
-																						"name": "Paul R\u00f6ber ",
+																						"name": "Paul Rober ",
 																						"parents": [
 																						{
 																							"grad": "1590",
@@ -901,7 +910,7 @@
 														{
 															"grad": "1752",
 															"school": "Georg-August-Universitat Gottingen",
-															"name": "Johann Georg B\u00fcsch ",
+															"name": "Johann Georg Busch ",
 															"parents": [
 															{
 																"grad": "1726, 1734",
@@ -926,7 +935,7 @@
 																			{
 																				"grad": "1634, 1637",
 																				"school": "Universiteit Leiden / Universitat Basel",
-																				"name": "Franciscus de le Bo\u00eb Sylvius ",
+																				"name": "Franciscus de le Boe Sylvius ",
 																				"parents": [
 																				{
 																					"grad": "1619, 1622",
