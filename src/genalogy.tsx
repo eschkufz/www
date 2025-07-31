@@ -8,7 +8,7 @@ export type Academic = {
 
 export const TREE: Academic = {
 	"name": "Eric Schkufza",
-    "bio": "I am an engineering co-founder at Graft. Prior to that I was a principal applied scientist at Amazon, and a senior researcher at the VMware Research Group. I graduated from Stanford University with a PhD in Computer Science in 2015. My advisor was Professor Alex Aiken. I am interested in programming languages and compilers as they relate to high-performance computing, typically in the context of hardware accelerators. My work focuses on the optimization of machine code, often in the absence of its original source.",
+    "bio": "I am an engineering co-founder at Graft. Prior to that I was a principal applied scientist at Amazon, and a senior researcher at the VMware Research Group. I graduated from Stanford University with a PhD in Computer Science in 2015. I am interested in programming languages and compilers as they relate to high-performance computing, typically in the context of hardware accelerators. My work focuses on the optimization of machine code, often in the absence of its original source.",
 	"school": "Stanford University",
 	"grad": 2015,
 	"parents": [
