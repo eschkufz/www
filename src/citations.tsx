@@ -10,6 +10,12 @@ export type Citation = {
 
 export const CITATIONS: Citation[] = [
   {
+    title: "Compiler-Driven FPGA Virtualization with Synergy (Research Summary)", 
+    authors: ["Joshua Landgraf","Tiffany Yang", "Will Lin", "Christopher Rossbach", "Eric Schkufza"], 
+    venue: "Communications of the ACM Research Highlights, May 2024",
+    bib: "https://dblp.org/rec/journals/cacm/LandgrafYLRS24.html?view=bibtex", 
+  },
+  {
     title: "Compiler-Driven FPGA Virtualization with Synergy", 
     authors: ["Joshua Landgraf","Tiffany Yang", "Will Lin", "Christopher Rossbach", "Eric Schkufza"], 
     venue: "ASPLOS 2021",
@@ -37,7 +43,7 @@ export const CITATIONS: Citation[] = [
     bib: "vmware_17.bib", 
   },
   {
-    title: "Stochastic Program Optimization", 
+    title: "Stochastic Program Optimization (Research Summary)", 
     authors: ["Eric Schkufza", "Rahul Sharma", "Alex Aiken"], 
     venue: "Communications of the ACM Research Highlights, February 2016",
     bib: "http://dblp.uni-trier.de/rec/bibtex/journals/cacm/Schkufza0A16", 
