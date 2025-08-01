@@ -9,7 +9,7 @@ const typography: TypographyVariantsOptions = {
   body2: {
     fontWeight: 300,
     fontSize: "10pt",
-    color: "#555555"
+    color: "#555555",
   },
 
   button: {
@@ -59,5 +59,5 @@ const typography: TypographyVariantsOptions = {
 };
 
 export const theme = createTheme({
-    typography
+  typography,
 });
