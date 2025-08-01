@@ -59,7 +59,7 @@ function IndividualLong(props: IndividualProps) {
       <GenealogyButtons {...props}/>
     </Stack>
     <Typography variant="body1">{props.academic.bio}</Typography>
-    <Link variant="body2" underline="hover" sx={{cursor: "pointer"}} onClick={()=>null}>Download my CV</Link>
+    <DocLink label="Download my CV" path="cv.pdf"/>
   </Stack>;
 }
 
@@ -118,10 +118,10 @@ function Cite({citation}: CiteProps) {
       <Typography variant="body2">{authors}</Typography>
       <Typography variant="body2">{citation.venue}</Typography>
       <Stack direction="row" sx={{width: "100%", alignItems: "center", gap: 0.5}}>
-        {citation.bib && <DocLink label="bib" path={citation.bib}/>}
-        {citation.text && <DocLink label="pdf" path={citation.text}/>}
-        {citation.deck && <DocLink label="deck" path={citation.deck}/>}
-        {citation.errata && <DocLink label="errata" path={citation.errata}/>}
+        {citation.bib && <DocLink label="bib" prefix="bib" path={citation.bib}/>}
+        {citation.text && <DocLink label="pdf" prefix="text" path={citation.text}/>}
+        {citation.deck && <DocLink label="deck" prefix="deck" path={citation.deck}/>}
+        {citation.errata && <DocLink label="errata" prefix="errata" path={citation.errata}/>}
       </Stack>
     </Stack>
   </Stack>;
@@ -129,9 +129,14 @@ function Cite({citation}: CiteProps) {
 
 type DocLinkProps = {
   label: string;
+  prefix?: string;
   path: string;
 };
 
-function DocLink({label, path}: DocLinkProps) {
-  return <Link variant="body2" underline="hover" sx={{cursor: "pointer"}} onClick={()=>alert(path)}>{label}</Link>
+function DocLink({label, prefix, path}: DocLinkProps) {
+  const uri = `${prefix ?? ""}${prefix ? "/" : ""}${path}`;
+  const onClick = () => {
+    window.location.href = uri  ;
+  }
+  return <Link variant="body2" underline="hover" sx={{cursor: "pointer"}} onClick={onClick}>{label}</Link>
 }

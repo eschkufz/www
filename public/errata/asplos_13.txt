@@ -1,0 +1,5 @@
+1. In Equation (6), the quotient c(R*;T)/c(R;T) should be a difference: c(R*;T)-c(R;T)
+
+2. In Equation (14), the quotient c(R*;T)/c(R;T) should be a difference: c(R*;T)-c(R;T)
+
+3. In Figure 13 (right), pmullw and paddw should be pmulld and paddd

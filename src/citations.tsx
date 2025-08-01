@@ -88,14 +88,13 @@ export const CITATIONS: Citation[] = [
     title: "Optimizing Out Overcomputation", 
     authors: ["Eric Schkufza", "Alex Aiken"], 
     venue: "APPROX 2014",
-    bib: "stanford_14.bib", 
+    bib: "approx_14.bib", 
   },
   {
     title: "Quantitative Binary Synthesis", 
     authors: ["Eric Schkufza", "Rahul Sharma", "Berkeley R. Churchill", "Alex Aiken"], 
     venue: "Stanford University Technical Report 2014",
-    bib: "https://cs.stanford.edu/people/eschkufz/docs/stanford_14.bib", 
-    text: "asplos_21.pdf", 
+    bib: "stanford_14.bib", 
   },
   {
     title: "Data-Driven Equivalence Checking", 
