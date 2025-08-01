@@ -20,7 +20,7 @@ type PageProps = {
 
 function Page({children}: PageProps) {
   return <Stack direction="column" sx={{width: "100%", alignItems: "center"}}>
-    <Stack direction="column" sx={{width: "750px", alignItems: "left", paddingTop: 8, gap: 1}}>
+    <Stack direction="column" sx={{width: "750px", alignItems: "left", paddingTop: 8, gap: 2}}>
       {children}
     </Stack>
   </Stack>;
@@ -59,6 +59,7 @@ function IndividualLong(props: IndividualProps) {
       <GenealogyButtons {...props}/>
     </Stack>
     <Typography variant="body1">{props.academic.bio}</Typography>
+    <Link variant="body2" underline="hover" sx={{cursor: "pointer"}} onClick={()=>null}>Download my CV</Link>
   </Stack>;
 }
 
@@ -91,7 +92,17 @@ type GenealogyButtonProps = IndividualProps & {
 };
 
 function GenealogyButton({activeParent, parent, collapse, expand}: GenealogyButtonProps) {
-  return <Link variant="body2" onClick={() => activeParent?.name === parent.name ? collapse() : expand(parent)}>{parent.name}</Link>
+  return <Link variant="body2" underline="hover" sx={{cursor: "pointer"}} onClick={() => activeParent?.name === parent.name ? collapse() : expand(parent)}>{parent.name}</Link>
+}
+
+type CitesProps = {
+  citations: Citation[];
+};
+
+function Cites({citations}: CitesProps) {
+  return <>
+    {citations.map((citation, i)=><Cite key={i} citation={citation}/>)}
+  </>
 }
 
 type CiteProps = {
@@ -106,16 +117,21 @@ function Cite({citation}: CiteProps) {
       <Typography variant="h3">{citation.title}</Typography>
       <Typography variant="body2">{authors}</Typography>
       <Typography variant="body2">{citation.venue}</Typography>
+      <Stack direction="row" sx={{width: "100%", alignItems: "center", gap: 0.5}}>
+        {citation.bib && <DocLink label="bib" path={citation.bib}/>}
+        {citation.text && <DocLink label="pdf" path={citation.text}/>}
+        {citation.deck && <DocLink label="deck" path={citation.deck}/>}
+        {citation.errata && <DocLink label="errata" path={citation.errata}/>}
+      </Stack>
     </Stack>
   </Stack>;
 }
 
-type CitesProps = {
-  citations: Citation[];
+type DocLinkProps = {
+  label: string;
+  path: string;
 };
 
-function Cites({citations}: CitesProps) {
-  return <>
-    {citations.map((citation, i)=><Cite key={i} citation={citation}/>)}
-  </>
+function DocLink({label, path}: DocLinkProps) {
+  return <Link variant="body2" underline="hover" sx={{cursor: "pointer"}} onClick={()=>alert(path)}>{label}</Link>
 }

@@ -9,6 +9,7 @@ const typography: TypographyVariantsOptions = {
   body2: {
     fontWeight: 300,
     fontSize: "10pt",
+    color: "#555555"
   },
 
   button: {
