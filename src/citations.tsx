@@ -46,7 +46,7 @@ export const CITATIONS: Citation[] = [
     title: "Stochastic Program Optimization (Research Summary)", 
     authors: ["Eric Schkufza", "Rahul Sharma", "Alex Aiken"], 
     venue: "Communications of the ACM Research Highlights, February 2016",
-    bib: "http://dblp.uni-trier.de/rec/bibtex/journals/cacm/Schkufza0A16", 
+    bib: "https://dblp.org/rec/journals/cacm/Schkufza0A16.html?view=bibtex", 
   },
   {
     title: "Stratified Synthesis: Automatically Learning the x86-64 Instruction Set", 
