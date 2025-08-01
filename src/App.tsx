@@ -136,7 +136,7 @@ type DocLinkProps = {
 function DocLink({label, prefix, path}: DocLinkProps) {
   const uri = `${prefix ?? ""}${prefix ? "/" : ""}${path}`;
   const onClick = () => {
-    window.location.href = uri  ;
+    window.location.href = path.substring(0, 4) === "http" ? path : uri;
   }
   return <Link variant="body2" underline="hover" sx={{cursor: "pointer"}} onClick={onClick}>{label}</Link>
 }
