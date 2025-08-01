@@ -3,12 +3,13 @@ import {
   Link,
   Stack,
   ThemeProvider,
+  Tooltip,
   Typography,
 } from "@mui/material";
 import { ReactNode, useState } from "react";
 import { Citation, CITATIONS } from "./citations";
 import { Academic, TREE } from "./genalogy";
-import { ArrowDownIcon, ArticleIcon } from "@phosphor-icons/react";
+import { ArrowDownIcon, ArticleIcon, StarIcon } from "@phosphor-icons/react";
 import { theme } from "./theme";
 
 export function App() {
@@ -209,7 +210,17 @@ function Cite({ citation }: CiteProps) {
     .join(", ");
   return (
     <Stack direction="row" sx={{ width: "100%", alignItems: "begin", gap: 1 }}>
-      <ArticleIcon />
+      {citation.superlative ? (
+        <Tooltip
+          title={citation.superlative ?? ""}
+          placement="top"
+          arrow={true}
+        >
+          <StarIcon />
+        </Tooltip>
+      ) : (
+        <ArticleIcon />
+      )}
       <Stack
         direction="column"
         sx={{ width: "100%", alignItems: "left", gap: 0.5, marginTop: -0.1 }}

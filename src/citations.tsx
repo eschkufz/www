@@ -2,6 +2,7 @@ export type Citation = {
   title: string;
   authors: string[];
   venue: string;
+  superlative?: string;
   bib?: string;
   text?: string;
   deck?: string;
@@ -32,6 +33,7 @@ export const CITATIONS: Citation[] = [
       "Eric Schkufza",
     ],
     venue: "ASPLOS 2021",
+    superlative: "Best Paper",
     bib: "https://dblp.org/rec/conf/asplos/LandgrafYLRS21.html?view=bibtex",
     text: "asplos_21.pdf",
   },
